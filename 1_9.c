@@ -13,6 +13,7 @@ int main()
             ++blank;
             caracter=0;
         }
+        // palabra______otra___palabra
         if(caracter==1 && blank!=0){
             putchar(' ');
             //putchar(c);
