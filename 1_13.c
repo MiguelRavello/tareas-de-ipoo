@@ -21,7 +21,8 @@ int main(){
          else if(state==OUT){
              state=IN;
              ++nw;
-         }        
+         }     
+         // palabra_ _ _ _ otra _ _ _ _ palabra
          if(caracter==1 && blank!=0){
              putchar('\n');
              ++nl;
