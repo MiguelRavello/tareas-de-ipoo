@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+//Remplazo de \b \t \n
 int main(){
     int c;
     char a = '/';
