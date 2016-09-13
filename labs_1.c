@@ -11,7 +11,7 @@ void copiar(char *xs, char *ys)
         i++;
     }
 }
-
+/*copea una string a otro de modo recursivo */
 void copia_rec(char *xs, char *ys,int tam)
 {
     if(*(ys+tam)!='\0'){
@@ -29,6 +29,7 @@ void imprimir(char *xs)
         printf("%c",*(xs+i));
 }
 
+/*concatena una string con la cabeza de otro string o con un char */
 void concatenar(char *xs, char *ys)
 {
     int i, j;
@@ -42,6 +43,7 @@ void concatenar(char *xs, char *ys)
     *(xs+i)=*(ys+j);
 }
 
+/*invierte un string */
 void r_imprimir(char *xs,int tamano)
 {   
     int i=0;
@@ -53,7 +55,7 @@ void r_imprimir(char *xs,int tamano)
         copia_rec(xs,vacio,i);
 }
  
-
+// Devuelve el tamaño del string
 int len(char *ys)
 {
     int tam=0;
@@ -63,9 +65,11 @@ int len(char *ys)
     return tam;
 }
 
+//convierte de mayusculas a minusculas
 int lower(int c){
     return c+'a'-'A';
 }
+//ubica la ultima letra a buscar en un string
 int strindex(char *xs, char letra){
     int i;
     int posicion=0;
@@ -79,6 +83,7 @@ int strindex(char *xs, char letra){
     else if(posicion==0)
         return -1;
 }
+//función exponencial
 float expo(float x, int y)
 {
     if(y==0)
@@ -91,6 +96,7 @@ float expo(float x, int y)
         return (1/x)*expo(x,y+1);
 }
 
+//convertidor de String a numero
 float conver(char *xs)
 {
     int i, m, j, potencia;  
