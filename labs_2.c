@@ -97,9 +97,7 @@ int main(){
     printf("\n...........................\n");
     char mol[]="mol";
     char rav[]="ravinof";
-    int i=0;
-    int j=0;
-    concatenar_n(mol,rav,i,j);
+    conca(mol,rav);
     printf("%s",mol);
     printf("\n...........................\n");
     char name[]="abcdef";
