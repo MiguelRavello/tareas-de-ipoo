@@ -31,7 +31,7 @@ void concatenar_n(char *xs,char *ys, int n, int m)
         concatenar_n(xs,ys,0,m+1);
     }
 }  
-//cual sera el error q no concatene recursivamente bien
+//tamanho de un string
 int len(char *xs){
     int i=0;
     while(*(xs+i)!='\0')
