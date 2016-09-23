@@ -20,6 +20,7 @@ void conca(char *xs, char *ys){
     }
 }
 
+//funcion que concatena dos cadenas de modo recursivo
 void concatenar_n(char *xs,char *ys, int n, int m)
 {
     if(*(xs+n)!='\0')
