@@ -24,9 +24,11 @@ void concatenar_n(char *xs,char *ys, int n, int m)
 {
     if(*(xs+n)!='\0')
         concatenar_n(xs,ys,n+1,m);
-    else if((*(xs+n)=*(ys+m))!='\0')
-        concatenar_n(xs,ys,n+1,m+1);
-
+    else if(*(ys+m)!='\0'){
+        *(xs+n)=*(ys+m);
+        *(xs+n+1)='\0';
+        concatenar_n(xs,ys,0,m+1);
+    }
 }  
 //cual sera el error q no concatene recursivamente bien
 int len(char *xs){
@@ -97,7 +99,9 @@ int main(){
     printf("\n...........................\n");
     char mol[]="mol";
     char rav[]="ravinof";
-    conca(mol,rav);
+    int i=0;
+    int j=0;
+    concatenar_n(mol,rav,i,j);
     printf("%s",mol);
     printf("\n...........................\n");
     char name[]="abcdef";
