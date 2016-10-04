@@ -6,11 +6,12 @@
 int getop(char s[])
 {
     int i,c;
+    //getch le entrega caracteres al stac s, 
     while ((s[0] = c = getch())==' '||c=='\t')
         ;
     s[1]='\0';
     if(!isdigit(c)&& c!='.')
-        return c; // no un numero
+        return c; // no un numero,,,+ - * /
     i=0;
     if (isdigit(c)) //collect integer part
         while(isdigit(s[++i] = c = getch()))
