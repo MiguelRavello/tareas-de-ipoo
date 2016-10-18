@@ -81,6 +81,25 @@ void insertar(nodo_t *head, nodo_t *xs,int posicion){
     }
 }
 
+void eliminar(nodo_t *head,int pos){
+    nodo_t *prev, *cur, *victima;
+    prev=head;
+    cur=head->next;
+    int i=1;
+    while(cur!=NULL){
+        if(i==pos){
+            prev->next=cur->next;
+            victima=cur;
+            free(victima);
+            //cur->next=cur;
+            break;
+        }
+        prev=cur;
+        cur=cur->next;
+        i++;
+    }
+}
+
 int len(nodo_t *head){
     nodo_t *t;
     t=head;
@@ -138,8 +157,11 @@ int main(){
     nodo_t *pos;
     pos=malloc(sizeof(nodo_t));
     pos->val=6;
-    int z=5;
+    int z=6;
     insertar(ini,pos,z);
+    imprimir(ini);
+    printf("\n..............................\n");
+    eliminar(ini,z);
     imprimir(ini);
 
     return 0;
