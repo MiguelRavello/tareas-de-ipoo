@@ -8,7 +8,7 @@ int main () {
 	P1.areaPoligono();
 	area_t s1;
 	s1=P1.getArea();
-	cout<<s1<<endl;
+	cout<<"area de un cuadrado: "<<s1<<endl;
 	return 0;
 }
 
