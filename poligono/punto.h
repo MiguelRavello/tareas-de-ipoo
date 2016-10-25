@@ -26,14 +26,14 @@ public:
 	cor_t getX();
 	cor_t getY();
 	radio_t distancia(punto,punto);
-	punto linea(punto,punto);
+	void linea(punto,punto);
 	area_t producto(punto);
 };
 
 class Figura{
 protected:
 	punto m_origen; //centro de la figura
-	int tam_lista; //tamaño del # de puntos q define la figura
+	int tam_lista; //tamaÃ±o del # de puntos q define la figura
 	punto *m_lista; //conjunto de puntos 
 	area_t m_area; //el area de dicha figura
 	
