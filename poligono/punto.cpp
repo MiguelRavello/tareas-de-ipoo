@@ -16,12 +16,7 @@ void punto::setPunto(cor_t nx,cor_t ny){
 cor_t punto::getX(){return x;}
 cor_t punto::getY(){return y;}
 
-radio_t punto::distancia(punto a, punto b){
-	radio_t radio=sqrt(pow((float)(a.getX()-b.getX()),2) + pow((float)(a.getY()-b.getY()),2));
-	return radio;
-}
-
-void punto::linea(punto a,punto b){
+void punto::lineaAB(punto a,punto b){
 	cor_t nx=b.getX()-a.getX();
 	cor_t ny=b.getY()-a.getY();
 	this->setX(nx);
@@ -30,7 +25,7 @@ void punto::linea(punto a,punto b){
 	//return c;
 }
 
-area_t punto::producto(punto b){
+area_t punto::producto_cruz(punto b){
 	return (area_t)(this->getX()*b.getY()-b.getX()*this->getY());
 }
 
@@ -78,16 +73,16 @@ void Poligon::areaPoligono(){
 	xs=new punto[tam_lista];
 	for(int i=0;i<tam_lista;i++){
 		punto temp;
-		temp.linea(m_origen,m_lista[i]);
+		temp.lineaAB(m_origen,m_lista[i]);
 		xs[i]=temp;//los vectores q van del origen a la periferie
 	}
 	for(int j=0;j<tam_lista;j++){
 		if(j==(tam_lista-1)){
-			temp2=abs(xs[j].producto(xs[0]))/2.0;
+			temp2=abs(xs[j].producto_cruz(xs[0]))/2.0;
 			temp1+=temp2;
 			break;
 		}
-		temp2=abs(xs[j].producto(xs[j+1]))/2.0;//areas desde el origen
+		temp2=abs(xs[j].producto_cruz(xs[j+1]))/2.0;//areas desde el origen
 		temp1+=temp2;
 	}
 	m_area=temp1;
