@@ -25,9 +25,8 @@ public:
 	void setPunto(cor_t,cor_t);
 	cor_t getX();
 	cor_t getY();
-	radio_t distancia(punto,punto);
-	void linea(punto,punto);
-	area_t producto(punto);
+	void lineaAB(punto,punto);
+	area_t producto_cruz(punto);
 };
 
 class Figura{
