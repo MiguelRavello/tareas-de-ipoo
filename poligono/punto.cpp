@@ -21,11 +21,13 @@ radio_t punto::distancia(punto a, punto b){
 	return radio;
 }
 
-punto punto::linea(punto a,punto b){
+void punto::linea(punto a,punto b){
 	cor_t nx=b.getX()-a.getX();
 	cor_t ny=b.getY()-a.getY();
-	punto c(nx,ny);
-	return c;
+	this->setX(nx);
+	this->setY(ny);
+	//punto c(nx,ny);
+	//return c;
 }
 
 area_t punto::producto(punto b){
